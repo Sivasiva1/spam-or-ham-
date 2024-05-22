@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB  
 import streamlit as st
-data = pd.read_csv(r'C:\Users\Sivaa\Desktop\spam-prediction\spam.csv')
+data = pd.read_csv('spam.csv')
 #data cleaning
 data['Category'] = data['Category'].replace("ham","Not Spam")
 data.drop_duplicates(inplace=True)
