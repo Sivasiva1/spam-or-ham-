@@ -37,4 +37,9 @@ st.header('Spam Detection')
 input_msg = st.text_input("Enter the message")
 if st.button('Validate'):
     output = answer(input_msg)
-    st.markdown((output))
+    if output == 'spam':
+       
+        st.error("Spam")
+    else:
+       
+        st.success("Not Spam")
